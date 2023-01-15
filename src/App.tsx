@@ -1,11 +1,12 @@
+import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
+import { Layout } from './components/Layout'
 import { HomePage } from './pages/HomePage'
 import { СalculatorPage } from './pages/СalculatorPage'
 import { СontactsPage } from './pages/СontactsPage'
 import { ProfilePage } from './pages/ProfilePage'
 import { NotfoundPage } from './pages/NotfoundPage'
-import { Layout } from './components/Layout'
 
 function App() {
   return (
