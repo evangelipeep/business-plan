@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import { Button } from '../button/Button'
 
 export const Header = () => {
   const Logo = require('./../../images/logo.png')
@@ -15,7 +16,7 @@ export const Header = () => {
   }
 
   return (
-    <nav className='flex justify-between items-center h-[60px] px-5 shadow-md bg-gray-50'>
+    <nav className='flex justify-between items-center h-[60px] px-5 shadow-2xl bg-gradient-to-r from-white via-my-green to-white'>
       <NavLink to='/' className='cursor-pointer opacity-100 hover:opacity-70'>
         <motion.img
           src={Logo}
@@ -29,16 +30,14 @@ export const Header = () => {
         />
       </NavLink>
       <span>
-        <ul className='flex wrap'>
+        <ul className='flex wrap items-center space-x-3'>
           <motion.li
             className='hover:text-my-green '
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
-            <NavLink to='/calculator' className='mr-3 '>
-              Калькулятор
-            </NavLink>
+            <NavLink to='/'>Главная</NavLink>
           </motion.li>
           <motion.li
             className='hover:text-my-green '
@@ -46,9 +45,7 @@ export const Header = () => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
-            <NavLink to='/contacts' className='mr-3 '>
-              Контакты
-            </NavLink>
+            <NavLink to='/calculator'>Калькулятор</NavLink>
           </motion.li>
           <motion.li
             className='hover:text-my-green '
@@ -56,10 +53,13 @@ export const Header = () => {
             whileTap={{ scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
-            <NavLink to='/profile' className='mr-3 '>
-              Профиль
-            </NavLink>
+            <NavLink to='/contacts'>Контакты</NavLink>
           </motion.li>
+          <li>
+            <NavLink to='/profile'>
+              <Button hasBorder={true}>Профиль</Button>
+            </NavLink>
+          </li>
         </ul>
       </span>
     </nav>

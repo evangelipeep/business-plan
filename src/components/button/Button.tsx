@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const borderStyles =
-  'border-2 border-my-green hover:border-my-green-2 rounded-lg'
+  'border-2 font-bold border-my-green hover:border-my-green-2 rounded-lg px-1 py-1'
 const filledStyles =
   'bg-my-green rounded-lg font-bold py-4 px-6 mx-0 hover:bg-my-green-2 hover:text-white'
 
@@ -17,8 +17,8 @@ export const Button = ({
         isFilled && filledStyles
       }`}
       whileHover={{ scale: 1.2 }}
-      onHoverStart={(e) => {}}
-      onHoverEnd={(e) => {}}
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 17 }}
     >
       {children}
     </motion.button>
