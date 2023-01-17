@@ -6,7 +6,7 @@ export const Layout = () => {
   return (
     <>
       <Header />
-      <main className='container'>
+      <main className='bg-gradient-to-r from-my-green to-white mx-auto'>
         <Outlet />
       </main>
       <Footer />
