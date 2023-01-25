@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { Button } from '../button/Button'
 
 export const Header = () => {
-  const Logo = require('./../../images/logo.png')
   const pVariants = {
     hidden: {
       x: -10,
@@ -24,7 +23,7 @@ export const Header = () => {
             to='/'
           >
             <motion.img
-              src={Logo}
+              src={'/images/logo.png'}
               initial={'hidden'}
               animate={'visible'}
               transition={{
