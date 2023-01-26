@@ -1,8 +1,7 @@
 export const SectionOnHome2 = () => {
   return (
-    <section className='flex bg-slate-50 '>
-      {/* //bg-gradient-to-r from-my-green via-white to-my-green */}
-      <div className='mx-auto py-12 space-y-3 w-3/4 text-lg '>
+    <section className=' flex bg-slate-50 ' >
+      <div className='container mx-auto py-12 space-y-3 w-3/4 text-lg '>
         <p>
           <strong>Бизнес план</strong> – это документ, который отвечает на все
           вопросы, связанные с вашим бизнесом и дает исчерпывающие представление

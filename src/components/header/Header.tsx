@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { Button } from '../button/Button'
 
 export const Header = () => {
-  const pVariants = {
+  const pVariants: Variants = {
     hidden: {
       x: -10,
       opacity: 0,
@@ -12,6 +12,13 @@ export const Header = () => {
       x: 0,
       opacity: 100,
     },
+  }
+  const bVariants: Variants = {
+    hidden:{ scale: 1.2 },
+    visible: { scale: 0.9, transition: {
+      delay: 0.5,
+      duration: 0.9,
+    } },
   }
 
   return (
@@ -24,38 +31,36 @@ export const Header = () => {
           >
             <motion.img
               src={'/images/logo.png'}
-              initial={'hidden'}
-              animate={'visible'}
-              transition={{
-                delay: 0.5,
-                duration: 0.5,
-              }}
+              initial='hidden'
+              animate='visible'
               variants={pVariants}
+              
             />
           </NavLink>
           <span>
             <ul className='flex wrap items-center space-x-4'>
               <motion.li
                 className='hover:text-white '
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                whileHover='hidden'
+                whileTap='visible'
+                variants={bVariants}
               >
                 <NavLink to='/'>Главная</NavLink>
               </motion.li>
               <motion.li
                 className='hover:text-white '
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                whileHover='hidden'
+                whileTap='visible'
+                variants={bVariants}
+                
               >
                 <NavLink to='/calculator'>Калькулятор</NavLink>
               </motion.li>
               <motion.li
                 className='hover:text-white '
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+                whileHover='hidden'
+                whileTap='visible'
+                variants={bVariants}
               >
                 <NavLink to='/contacts'>Контакты</NavLink>
               </motion.li>
