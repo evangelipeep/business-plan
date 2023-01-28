@@ -2,13 +2,13 @@ import { GridEl } from './GridEl'
 
 export const SectionOnHome3 = () => {
   return (
-    <section className='border-t-2 bg-my-green'>
+    <section className='bg-my-green'>
       <div className=' container mx-auto '>
         <h1 className='text-center py-5 font-bold text-lg'>
           Проект можно разработать в любой отрасли
         </h1>
 
-        <ul className=' grid grid-cols-4 '>
+        <ul className='grid grid-cols-2 xl:grid-cols-4 '>
           <GridEl
             text='Бизнес-план в сфере красоты'
             img='./../images/img-1.png'

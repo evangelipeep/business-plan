@@ -5,11 +5,14 @@ import { Footer } from './footer/Footer'
 export const Layout = () => {
   return (
     <>
+    
       <Header />
-      <main className='bg-gradient-to-r from-my-green to-white mx-auto'>
+      <main>
         <Outlet />
       </main>
       <Footer />
+    
+      
     </>
   )
 }

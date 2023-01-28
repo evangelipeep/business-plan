@@ -2,6 +2,11 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    screens: {
+    'xl':'1280px',
+    'md':'768px'
+    },
+    
     extend: {
       colors: {
         'my-green': 'hsl(76, 37%, 68%)',

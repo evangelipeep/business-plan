@@ -1,11 +1,14 @@
 import { NavLink } from 'react-router-dom'
 import { motion, Variants } from 'framer-motion'
 import { Button } from '../button/Button'
+import { MobileMenu } from '../mobile-menu/MobileMenu'
+import { ReactComponent as Logo } from '../../assets/svg/logo-nav.svg'
+import {ReactComponent as LogoMobile} from '../../assets/svg/logo-mobile.svg'
 
 export const Header = () => {
   const pVariants: Variants = {
     hidden: {
-      x: -10,
+      x: -100,
       opacity: 0,
     },
     visible: {
@@ -22,23 +25,28 @@ export const Header = () => {
   }
 
   return (
-    <header className='bg-gradient-to-r from-white to-my-green'>
-      <div className='mx-auto'>
-        <nav className='flex justify-between items-center h-[60px] px-5 shadow-xl'>
+    <header className='bg-my-green'>
+      
+        <nav className='flex justify-around items-center h-[60px] px-5 shadow-xl'>
           <NavLink
             className='cursor-pointer opacity-100 hover:opacity-70'
             to='/'
           >
-            <motion.img
-              src={'/images/logo.png'}
+            <motion.div
               initial='hidden'
               animate='visible'
-              variants={pVariants}
+              variants={pVariants}>
+                <LogoMobile
+                className='flex h-10 w-10 xl:hidden'/>
+                <Logo 
+                className='hidden xl:flex xl:h-10'
+                />
+            </motion.div>
               
-            />
+            
           </NavLink>
-          <span>
-            <ul className='flex wrap items-center space-x-4'>
+          <div>
+            <ul className='hidden xl:flex wrap items-center space-x-4'>
               <motion.li
                 className='hover:text-white '
                 whileHover='hidden'
@@ -70,9 +78,11 @@ export const Header = () => {
                 </NavLink>
               </li>
             </ul>
-          </span>
+            <MobileMenu/>
+          </div>
         </nav>
-      </div>
+        
+      
     </header>
   )
 }
