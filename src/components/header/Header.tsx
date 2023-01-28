@@ -13,14 +13,16 @@ export const Header = () => {
     },
     visible: {
       x: 0,
-      opacity: 100,
+      opacity: 100, transition: {
+        delay: 0.5,
+        duration: 0.9,
+      }
     },
   }
   const bVariants: Variants = {
     hidden:{ scale: 1.2 },
     visible: { scale: 0.9, transition: {
-      delay: 0.5,
-      duration: 0.9,
+      type: 'spring', stiffness: 400, damping: 17 
     } },
   }
 
