@@ -1,11 +1,18 @@
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { motion, Variants } from 'framer-motion'
 import { Button } from '../button/Button'
-import { MobileMenu } from '../mobile-menu/MobileMenu'
+import { ReactComponent as IconOpenMenu } from '../../assets/svg/icon-menu.svg'
+import { ReactComponent as IconCloseMenu } from '../../assets/svg/icon-close-menu.svg'
 import { ReactComponent as Logo } from '../../assets/svg/logo-nav.svg'
-import {ReactComponent as LogoMobile} from '../../assets/svg/logo-mobile.svg'
+import { MobileNav } from '../mobile-nav/MobileNav'
+
+
 
 export const Header = () => {
+
+  const [mobileNavOpen, setMobileNavOpen] = useState(false)
+  
   const pVariants: Variants = {
     hidden: {
       x: -100,
@@ -27,26 +34,24 @@ export const Header = () => {
   }
 
   return (
+    
+    
+    
     <header className='bg-my-green'>
       
-        <nav className='flex justify-around items-center h-[60px] px-5 shadow-xl'>
-          <NavLink
-            className='cursor-pointer opacity-100 hover:opacity-70'
-            to='/'
-          >
+        <nav className='flex justify-between xl:justify-around items-center h-[60px] px-5 shadow-xl'>
+      
+          <NavLink to='/'>
             <motion.div
               initial='hidden'
               animate='visible'
               variants={pVariants}>
-                <LogoMobile
-                className='flex h-10 w-10 xl:hidden'/>
                 <Logo 
-                className='hidden xl:flex xl:h-10'
+                className='h-5 w-[160px] md:h-8 xl:h-10'
                 />
             </motion.div>
-              
-            
           </NavLink>
+
           <div>
             <ul className='hidden xl:flex wrap items-center space-x-4'>
               <motion.li
@@ -80,11 +85,22 @@ export const Header = () => {
                 </NavLink>
               </li>
             </ul>
-            <MobileMenu/>
+            <div className='xl:hidden flex ml-auto cursor-pointer z-30'
+              onClick={() => setMobileNavOpen(!mobileNavOpen)}
+            >
+              {mobileNavOpen ? <IconCloseMenu/> : <IconOpenMenu/>}
+              
+            </div>
+            <div>
+            <MobileNav isOpen={mobileNavOpen}/>
+
+            </div>
           </div>
+            
         </nav>
         
       
     </header>
   )
 }
+

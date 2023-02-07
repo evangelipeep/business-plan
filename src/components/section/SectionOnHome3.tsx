@@ -1,43 +1,43 @@
-import { GridEl } from './GridEl'
+import { GridElement } from './GridElement'
 
 export const SectionOnHome3 = () => {
   return (
     <section className='bg-my-green'>
-      <div className=' container mx-auto '>
-        <h1 className='text-center py-5 font-bold text-lg'>
+      <div className='max-w-4xl mx-auto '>
+        <h1 className='text-center py-5 font-bold text-2xl'>
           Проект можно разработать в любой отрасли
         </h1>
 
-        <ul className='grid grid-cols-2 xl:grid-cols-4 '>
-          <GridEl
+        <ul className='grid gap-5 grid-cols-2 md:grid-cols-3 xl:grid-cols-4 '>
+          <GridElement
             text='Бизнес-план в сфере красоты'
             img='./../images/img-1.png'
           />
-          <GridEl
+          <GridElement
             text='Бизнес-план в сфере
             швейной матерской'
             img='./../images/img-2.png'
           />
-          <GridEl
+          <GridElement
             text='Бизнес-план в сфере 
             ремонта компьютеров'
             img='./../images/img-3.png'
           />
-          <GridEl
+          <GridElement
             text='Бизнес-план в сфере фотоуслуг'
             img='./../images/img-4.png'
           />
-          <GridEl text='Бизнес-план в сфере СТО' img='./../images/img-5.png' />
-          <GridEl
+          <GridElement text='Бизнес-план в сфере СТО' img='./../images/img-5.png' />
+          <GridElement
             text='Бизнес-план в сфере 
             общественного питания'
             img='./../images/img-6.png'
           />
-          <GridEl
+          <GridElement
             text='Бизнес-план в сфере обучения'
             img='./../images/img-7.png'
           />
-          <GridEl text='И много других сфер' img='./../images/img-8.png' />
+          <GridElement text='И много других сфер' img='./../images/img-8.png' />
         </ul>
       </div>
     </section>
