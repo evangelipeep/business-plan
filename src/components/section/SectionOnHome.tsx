@@ -7,7 +7,7 @@ export const SectionOnHome = () => {
     visible: { opacity: 1, scale: 1 },
   }
   return (
-    <section className="mx-auto py-32 xl:py-60 text-center w-max h-screen">
+    <section className="mx-auto py-52 text-center h-screen">
       <motion.h1
         className="font-bold text-2xl  md:text-4xl xl:text-7xl"
         initial={'hidden'}

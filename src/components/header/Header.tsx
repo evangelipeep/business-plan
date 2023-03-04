@@ -49,7 +49,7 @@ export const Header = () => {
             </motion.div>
           </NavLink>
           <div className={`${mobileNavOpen ? menuCloseStyle : menuOpenStyle}`}>
-            <ul className="absolute md:static w-full flex flex-col md:flex-row md:items-center gap-8 md:gap-[4vw] bg-my-green left-0 top-[95px] text-center">
+            <ul className="absolute md:static w-full flex flex-col md:flex-row md:items-center gap-8 md:gap-[4vw] bg-my-green left-0 top-[95px] text-center py-7">
               <motion.li
                 className={`${howerWhite}`}
                 whileHover="hidden"
@@ -91,69 +91,4 @@ export const Header = () => {
       </header>
     </>
   )
-}
-
-//
-
-{
-  /* <nav className='flex justify-between xl:justify-around items-center h-[60px] px-5 shadow-xl'>
-      
-          <NavLink to='/'>
-            <motion.div
-              initial='hidden'
-              animate='visible'
-              variants={pVariants}>
-                <Logo 
-                className='h-5 w-[160px] md:h-8 xl:h-10'
-                />
-            </motion.div>
-          </NavLink>
-
-          <div>
-            <ul className='hidden xl:flex wrap items-center space-x-4'>
-              <motion.li
-                className='hover:text-white '
-                whileHover='hidden'
-                whileTap='visible'
-                variants={bVariants}
-              >
-                <NavLink to='/'>Главная</NavLink>
-              </motion.li>
-              <motion.li
-                className='hover:text-white '
-                whileHover='hidden'
-                whileTap='visible'
-                variants={bVariants}
-                
-              >
-                <NavLink to='/calculator'>Калькулятор</NavLink>
-              </motion.li>
-              <motion.li
-                className='hover:text-white '
-                whileHover='hidden'
-                whileTap='visible'
-                variants={bVariants}
-              >
-                <NavLink to='/contacts'>Контакты</NavLink>
-              </motion.li>
-              <li>
-                <NavLink to='/profile'>
-                  <Button hasBorder={true} children='Профиль'></Button>
-                </NavLink>
-              </li>
-            </ul>
-            <div className='xl:hidden flex ml-auto cursor-pointer z-30'
-              onClick={() => setMobileNavOpen(!mobileNavOpen)}
-            >
-              {mobileNavOpen ? <IconCloseMenu/> : <IconOpenMenu/>}
-              
-            </div>
-            <div>
-            
-
-            </div>
-          </div>
-            
-        </nav>
-         */
 }
