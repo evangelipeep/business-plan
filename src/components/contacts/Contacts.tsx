@@ -24,9 +24,9 @@ export const Contacts = () => {
                 <li className={styleEl}>
                     <Email/>
                     <span className='font-bold'>Почта</span>
-                    <a className='opacity-100 hover:opacity-50' href='mailto:business.contract2022@gmail.com'>business.contract2022@gmail.com</a>
+                    <a className='opacity-100 hover:opacity-50' href='mailto:business.contract2022@gmail.com'>business.contract2022 @gmail.com</a>
                     
-                    <a className='opacity-100 hover:opacity-50' href='mailto:rustaveli812@yandex.ru'>rustaveli812@yandex.ru</a>
+                    <a className='opacity-100 hover:opacity-50' href='mailto:rustaveli812@yandex.ru'>rustaveli812 @yandex.ru</a>
                 </li>
                 <li className={styleEl}>
                     <Vk/>
