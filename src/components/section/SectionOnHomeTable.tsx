@@ -1,6 +1,6 @@
-import { GridElement } from './GridElement'
+import { GridElement } from './../GridElement'
 
-export const SectionOnHome3 = () => {
+export const SectionOnHomeTable = () => {
   return (
     <section className='bg-my-green'>
       <div className='max-w-4xl mx-auto '>

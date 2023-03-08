@@ -1,5 +1,5 @@
 
-export const SectionOnHome2 = () => {
+export const SectionOnHomeDescription = () => {
   return (
     <section className=' flex bg-my-green-2' >
       <div

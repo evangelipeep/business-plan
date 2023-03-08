@@ -1,13 +1,13 @@
 import { SectionOnHome } from '../components/section/SectionOnHome'
-import { SectionOnHome2 } from '../components/section/SectionOnHome2'
-import { SectionOnHome3 } from '../components/section/SectionOnHome3'
+import { SectionOnHomeDescription } from '../components/section/SectionOnHomeDescription'
+import { SectionOnHomeTable } from '../components/section/SectionOnHomeTable'
 
 export const HomePage = () => {
   return (
-    <div>
+    <>
       <SectionOnHome />
-      <SectionOnHome2 />
-      <SectionOnHome3 />
-    </div>
+      <SectionOnHomeDescription />
+      <SectionOnHomeTable />
+    </>
   )
 }
