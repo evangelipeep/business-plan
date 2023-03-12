@@ -1,11 +1,7 @@
-
 export const SectionOnHomeDescription = () => {
   return (
-    <section className=' flex bg-my-green-2' >
-      <div
-      className='container mx-auto py-12 space-y-3 w-3/4 text-lg'
-      
-      >
+    <section className=" flex bg-my-green-2" id="description">
+      <div className="container mx-auto py-[10vh] space-y-3 w-3/4 text-lg">
         <p>
           <strong>Бизнес план</strong> – это документ, который отвечает на все
           вопросы, связанные с вашим бизнесом и дает исчерпывающие представление
@@ -27,7 +23,7 @@ export const SectionOnHomeDescription = () => {
           поддержки на развитие в размере от 100 000 рублей до 300 000 рублей в
           зависимости от региона.
         </p>
-        <p className='font-bold'>
+        <p className="font-bold">
           Также любой гражданин имеет право на единовременную финансовую помощь
           для развития собственного дела от центра занятости.
         </p>

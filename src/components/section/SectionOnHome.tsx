@@ -7,7 +7,7 @@ export const SectionOnHome = () => {
     visible: { opacity: 1, scale: 1 },
   }
   return (
-    <section className="mx-auto py-52 text-center h-screen">
+    <section className="mx-auto py-[35vh] text-center h-screen">
       <motion.h1
         className="font-bold text-2xl  md:text-4xl xl:text-7xl"
         initial={'hidden'}
@@ -34,9 +34,11 @@ export const SectionOnHome = () => {
       >
         Начните своё дело прямо сейчас!
       </motion.h2>
-      <button className="mt-10 xl:mt-20">
-        <Button isFilled={true} children="ПОЕХАЛИ"></Button>
-      </button>
+      <div className="mt-10 xl:mt-20">
+        <a href="#description">
+          <Button isFilled={true} children="ПОЕХАЛИ"></Button>
+        </a>
+      </div>
     </section>
   )
 }
