@@ -64,7 +64,7 @@ export const Header = () => {
                 whileTap="visible"
                 variants={bVariants}
               >
-                <NavLink to="/calculator">Калькулятор</NavLink>
+                <NavLink to="/calculator">Анкета</NavLink>
               </motion.li>
               <motion.li
                 className={`${howerWhite}`}
