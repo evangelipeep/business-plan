@@ -1,5 +1,10 @@
 import React from 'react'
+import { Auth } from '../components/auth/Auth'
 
 export const ProfilePage = () => {
-  return <div>Profile</div>
+  return (
+    <div>
+      <Auth />
+    </div>
+  )
 }
